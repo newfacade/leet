@@ -3,6 +3,10 @@ from typing import List
 
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
+        """
+        给定一个字符串 s，将 s 分割成一些子串，使每个子串都是回文串
+        key: 回溯算法
+        """
         result = []
 
         def helper(cur_s: str, pre_palindromes: List[str]):

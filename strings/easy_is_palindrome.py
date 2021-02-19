@@ -1,6 +1,9 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        """双指针"""
+        """
+        给定一个字符串，验证它是否是回文串
+        key: 双指针, isalnum()
+        """
         left = 0
         right = len(s) - 1
         while left < right:

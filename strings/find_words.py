@@ -3,6 +3,10 @@ from typing import List
 
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
+        """
+        1. build a trie
+        2. backtracking
+        """
         WORD_KEY = '$'
 
         trie = {}
@@ -13,6 +17,7 @@ class Solution:
                 node = node.setdefault(char, {})
             # mark the existence of a word in trie node
             node[WORD_KEY] = word
+        print(trie)
 
         rowNum = len(board)
         colNum = len(board[0])
